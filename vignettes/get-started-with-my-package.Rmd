@@ -170,4 +170,23 @@ fusen::inflate(
 )
 ```
 
+# # Commit changes to Git after inflating
+```{r}
+system("git add .")
+```
+
+```{r}
+# system("git commit -m '\Inflated package with square and cube functions'") ===> this didn't work!!!!!
+system("git commit -m \"Inflated package with square and cube functions\"")
+```
+# to test your package
+
+```{r}
+library(FirstFusenPackageTry)
+```
+
+```{r}
+square(5)  # Returns 25
+cube(3)    # Returns 27
+```
 
