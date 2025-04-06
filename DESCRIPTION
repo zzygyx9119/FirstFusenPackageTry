@@ -1,16 +1,23 @@
-Package: FirstFusenPackageTry
 Type: Package
+Package: FirstFusenPackageTry
 Title: What the Package Does (Title Case)
 Version: 0.1.0
-Authors@R: c(
-    person(
-      "Jane", "Doe",
-      email = "jane@example.com",
-      role = c("aut", "cre")
-    )
-  )
+Authors@R: 
+    person("Jane", "Doe", , "jane@example.com", role = c("aut", "cre"))
 Description: More about what it does (maybe more than one line).
     Continuation lines should be indented.
 License: What license is it under?
+Imports: 
+    stats
+Suggests: 
+    fusen,
+    knitr,
+    rmarkdown,
+    testthat,
+    usethis
+VignetteBuilder: 
+    knitr
+Config/fusen/version: 0.7.1
 Encoding: UTF-8
 LazyData: true
+RoxygenNote: 7.3.2

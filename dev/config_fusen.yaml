@@ -1,0 +1,23 @@
+flat_my_package.Rmd:
+  path: dev/flat_my_package.Rmd
+  state: active
+  R:
+  - R/cube.R
+  - R/my_median.R
+  - R/my_other_median.R
+  - R/square.R
+  tests:
+  - tests/testthat/test-my_median.R
+  - tests/testthat/test-my_other_median.R
+  - tests/testthat/test-square.R
+  - tests/testthat/test-cube.R
+  vignettes: vignettes/get-started-with-my-package.Rmd
+  inflate:
+    flat_file: dev/flat_my_package.Rmd
+    vignette_name: Get Started with My Package
+    open_vignette: true
+    check: true
+    document: true
+    overwrite: ask
+    clean: ask
+    codecov: false

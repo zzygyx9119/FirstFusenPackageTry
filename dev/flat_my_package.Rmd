@@ -240,8 +240,15 @@ testthat::test_that("cube works correctly", {
 })
 ```
 
-Development Workflow
-Initialize Git (Run Once)
+########################################### Development Workflow
+# Initialize Git (Run Once)
+
+```{r}
+# Initialize Git repository (only run this once)
+usethis::use_git()
+# After running, commit the initial files manually if prompted
+```
+
 <!--
 # There can be development actions
 
@@ -254,6 +261,7 @@ Create a chunk with 'development' actions
 These are only included in the present flat template file, their content will not be part of the package anywhere else.
 -->
 
+################################### I didn't run this
 ```{r development-inflate, eval=FALSE}
 # Keep eval=FALSE to avoid infinite loop in case you hit the knit button
 # Execute in the console directly
@@ -270,3 +278,13 @@ Build your package from this very Rmd using `fusen::inflate()`
 - Verify your function is in `"R/"` directory
 - Verify your test is in `"tests/testthat/"` directory
 - Verify this Rmd appears in `"vignettes/"` directory
+
+```{r}
+fusen::inflate(
+  pkg = getwd(),
+  flat_file = "dev/flat_my_package.Rmd",
+  vignette_name = "Get Started with My Package",
+  check = TRUE
+)
+```
+
